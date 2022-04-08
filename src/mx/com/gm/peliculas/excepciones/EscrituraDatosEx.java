@@ -8,6 +8,10 @@ package mx.com.gm.peliculas.excepciones;
  *
  * @author DIDIER JAVIER
  */
-public class EscrituraDatosEx {
+public class EscrituraDatosEx extends AccesoDatosEx{
+    
+    public EscrituraDatosEx(String mensaje) {
+        super(mensaje);
+    }
     
 }
