@@ -20,7 +20,7 @@ public interface IAccesoDatos {
     
     public void escribir(Pelicula pelicula, String nombreRecurso, boolean Anexar) throws EscrituraDatosEx;
     
-    public String Buscar(String nombreRecurso, String buscar) throws LecturaDatosEx;
+    public String buscar(String nombreRecurso, String buscar) throws LecturaDatosEx;
     
     public void crear(String nombreRecurso) throws AccesoDatosEx;
     

@@ -4,17 +4,8 @@
  */
 package mx.com.gm.peliculas.datos;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.*;
+import java.util.*;
 import mx.com.gm.peliculas.domain.Pelicula;
 import mx.com.gm.peliculas.excepciones.*;
 /**
@@ -68,7 +59,7 @@ public class AccesoDatosImpl implements IAccesoDatos{
     }
 
     @Override
-    public String Buscar(String nombreRecurso, String buscar) throws LecturaDatosEx {
+    public String buscar(String nombreRecurso, String buscar) throws LecturaDatosEx {
         var archivo = new File(nombreRecurso);
         String resultado = null; //Se almacena el resultado de la búsqueda. Si se encuentra se retorna el nombre e índice de la película
         try {
@@ -114,6 +105,4 @@ public class AccesoDatosImpl implements IAccesoDatos{
             archivo.delete();
         System.out.println("Se ha borrado el archivo");
     }
-
-    
 }
